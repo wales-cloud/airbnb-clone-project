@@ -56,3 +56,99 @@ A containerization platform that packages the application and its dependencies i
 ## CI/CD Pipelines
 Automated processes that run tests, build the application, and deploy changes to production. This ensures faster, more reliable development workflows.
 
+# Database Design
+
+## Key Entities and Their Fields
+
+### Users
+- `id`: Unique identifier for each user
+- `name`: Full name of the user
+- `email`: User's email address (used for login)
+- `password_hash`: Hashed password for authentication
+- `date_joined`: Timestamp of when the user registered
+
+### Properties
+- `id`: Unique identifier for each property
+- `owner_id`: Reference to the user who owns the property
+- `title`: Title or name of the property listing
+- `description`: Detailed description of the property
+- `location`: Physical address or coordinates of the property
+
+### Bookings
+- `id`: Unique identifier for each booking
+- `user_id`: Reference to the user who made the booking
+- `property_id`: Reference to the booked property
+- `check_in_date`: Date the booking starts
+- `check_out_date`: Date the booking ends
+
+### Reviews
+- `id`: Unique identifier for each review
+- `user_id`: Reference to the user who wrote the review
+- `property_id`: Reference to the reviewed property
+- `rating`: Numeric rating given by the user
+- `comment`: Text review provided by the user
+
+### Payments
+- `id`: Unique identifier for each payment
+- `user_id`: Reference to the user who made the payment
+- `booking_id`: Reference to the related booking
+- `amount`: Total amount paid
+- `payment_date`: Date the payment was completed
+
+## Relationships Between Entities
+- A **User** can create multiple **Properties** (one-to-many relationship).
+- A **User** can make multiple **Bookings** (one-to-many relationship).
+- A **Booking** is associated with one **Property** (many-to-one relationship).
+- A **Booking** is linked to one **Payment** (one-to-one relationship).
+- A **Property** can have multiple **Reviews** written by different **Users** (one-to-many relationship).
+- A **User** can leave multiple **Reviews** for different **Properties**.
+
+# Feature Breakdown
+
+## User Management
+Users can register, log in, and manage their profiles securely. Authentication and authorization mechanisms ensure that only verified users can access or modify their own information, helping to maintain data privacy and system integrity.
+
+## Property Management
+Hosts can create, update, retrieve, and delete property listings. This feature allows users to showcase properties with details such as title, description, price, and location, forming the core content of the platform.
+
+## Booking System
+Users can browse available properties and make reservations for specific dates. The system handles check-in and check-out dates, availability checks, and stores booking information for future reference and management.
+
+## Payment Processing
+The platform integrates payment handling to allow users to pay for bookings securely. Payment records are stored and associated with bookings, ensuring transparency and smooth financial transactions.
+
+## Review System
+After a stay, users can leave reviews and ratings for properties. This feedback system helps maintain trust and quality across the platform by informing future users about their potential accommodations.
+
+## Database Optimization
+Indexes and caching strategies are implemented to improve the speed and efficiency of data retrieval. This ensures the system
+
+# API Security
+
+## Authentication
+Authentication ensures that only registered users can access protected endpoints. It verifies the identity of users through secure login methods, protecting personal information and sensitive operations like bookings and payments.
+
+## Authorization
+Authorization controls what authenticated users are allowed to do within the system. It ensures that users can only modify or access their own data, preventing unauthorized actions like altering another user's bookings or property listings.
+
+## Rate Limiting
+Rate limiting protects the API from abuse by restricting the number of requests a user or IP address can make within a given time frame. This helps defend against denial-of-service attacks and ensures fair resource usage across all users.
+
+## Data Encryption
+Sensitive data, including passwords and payment information, will be encrypted both in transit (using HTTPS) and at rest. Encryption protects against eavesdropping, data breaches, and unauthorized access.
+
+## Importance of API Security
+Securing the API is critical for protecting user data, ensuring the integrity of bookings and transactions, and maintaining trust in the platform. Proper security measures help prevent data leaks, financial fraud, and system downtime.
+
+# CI/CD Pipeline
+
+Continuous Integration (CI) and Continuous Deployment (CD) pipelines automate the process of building, testing, and deploying application code. They ensure that changes are tested early and deployed safely, reducing the risk of errors in production.
+
+In this project, a CI/CD pipeline helps maintain a consistent and reliable development workflow. Every code update is automatically validated, tested, and deployed, which speeds up development, improves code quality, and minimizes downtime.
+
+## Tools for CI/CD
+- **GitHub Actions**: For automating workflows like code testing, linting, and deployment to servers.
+- **Docker**: For packaging the application and its dependencies into containers, ensuring consistency across different environments.
+- **Docker Compose**: For managing multi-container deployments during development and testing.
+- **AWS (optional)**: For cloud-based hosting, scaling, and deployment of the backend services.
+
