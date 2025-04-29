@@ -1,19 +1,35 @@
-Overview
+# Overview
+
 #This project is a backend clone of Airbnb, built to replicate essential functionalities such as user management, property listings, bookings, payment processing, and reviews. The focus is on creating a scalable, secure, and high-performance application.
+
 #Project Goals
+
 #Implement user registration, authentication, and profile management
+
 #Develop property listing creation, updating, retrieval, and deletion features
+
 #Build a booking system for users to reserve and manage stays
+
 #Integrate payment processing for secure transactions
+
 #Allow users to post and manage property reviews and ratings
+
 #Optimize the database for fast and efficient data access
+
 #Technology Stack
+
 #Backend Framework: Django, Django REST Framework
+
 #Database: PostgreSQL
+
 #Caching: Redis
+
 #Asynchronous Task Management: Celery
+
 #API Standards: OpenAPI (REST) and GraphQL
+
 #Containerization: Docker
+
 #CI/CD: Automated testing and deployment pipelines
 
 # Team Roles
