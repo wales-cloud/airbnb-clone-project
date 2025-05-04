@@ -4,11 +4,11 @@
 
 # FRONTEND
 
-## Project Overview
+# Project Overview
 
 This project is a frontend-focused clone of the popular Airbnb platform. It is designed to help developers learn and implement core concepts in modern frontend development such as component-based architecture, responsive UI/UX, and API integration using a real-world use case.
 
-# Project Goals
+## Project Goals
 
 ## Build a functional and visually appealing property booking interface.
 ## Implement search and filtering functionality.
