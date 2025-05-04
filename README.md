@@ -1,7 +1,49 @@
 # Overview
 
-## This project is a backend clone of Airbnb, built to replicate essential functionalities such as user management, property listings, bookings, payment processing, and reviews. The focus is on creating a scalable, secure, and high-performance application.
+## This project is a Frontend and backend clone of Airbnb, built to replicate essential functionalities such as user management, property listings, bookings, payment processing, and reviews. The focus is on creating a scalable, secure, and high-performance application.
 
+# FRONTEND
+
+## Project Overview
+
+This project is a frontend-focused clone of the popular Airbnb platform. It is designed to help developers learn and implement core concepts in modern frontend development such as component-based architecture, responsive UI/UX, and API integration using a real-world use case.
+
+# Project Goals
+
+## Build a functional and visually appealing property booking interface.
+## Implement search and filtering functionality.
+## Develop a seamless booking and checkout process.
+## Gain hands-on experience with React, TypeScript, and Next.js.
+## Understand and simulate professional software development workflows.
+
+# Tech Stack
+
+## Frontend: React.js + TypeScript  
+## Framework: Next.js (for SSR and static generation)  
+## Styling: TailwindCSS  
+## State Management: Redux Toolkit or Context API  
+## Testing: Jest  
+## Backend (illustrative only): Python, Django, MySQL  
+## API Integration: REST APIs
+
+# Project Timeline
+
+The project is structured in 8 development phases across 16 weeks, covering UI/UX, React fundamentals, API integration, authentication, and final deployment.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+## BACKEND
 ## Project Goals
 
 ## Implement user registration, authentication, and profile management
